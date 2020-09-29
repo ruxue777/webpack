@@ -7,7 +7,9 @@
     "webpack-cli": "^3.3.12",
     "webpack": "^4.44.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack ./01/src/index.js -o ./01/dist/bundle.js --mode=development"
