@@ -12,6 +12,23 @@ module.exports = {
         path: path.resolve(__dirname, './dist')
     },
 
+    //模块
+    module:{
+        rules:[
+            {
+                //规则获取需要打包的文件后缀
+                test: /\.css$/,
+
+                //匹配后的执行顺序是右到左！
+                use: ['style-loader','css-loader']
+            },{
+                //less
+                test: /\.less$/,
+                use :['style-loader','css-loader','less-loader']
+            }
+        ]
+    },
+
     //devServer
     devServer:{
         //publicPath:'/dist',
