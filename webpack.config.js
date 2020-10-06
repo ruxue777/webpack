@@ -25,6 +25,20 @@ module.exports = {
                 //less
                 test: /\.less$/,
                 use :['style-loader','css-loader','less-loader']
+            },{
+                //图片打包
+                test: /\.(png|jpg|jpeg|gif)$/,
+                //loader拓展插件内容,自定义目录和名称
+                //loader :'file-loader',
+                
+                loader :'url-loader',
+
+                //保存在img文件夹中
+                options :{
+                    //base64作用与小于10kb图片
+                    limit : 10240,
+                    name : './img/[name].[ext]'
+                }
             }
         ]
     },
